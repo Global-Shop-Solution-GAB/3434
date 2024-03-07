@@ -1,0 +1,337 @@
+Program.Sub.ScreenSU.Start
+gui.SS_Form1..create
+gui.SS_Form1..caption("On-Time Shipment Analysis by Customer")
+gui.SS_Form1..size(5020,3995)
+gui.SS_Form1..position(0,0)
+gui.SS_Form1..event(unload,unload)
+gui.SS_Form1..alwaysontop(False)
+gui.SS_Form1..fontname("Arial")
+gui.SS_Form1..fontsize(8)
+gui.SS_Form1..forecolor(0)
+gui.SS_Form1..fontstyle(,,,,)
+gui.SS_Form1..BackColor(-2147483633)
+gui.SS_Form1..controlbox(True)
+gui.SS_Form1..maxbutton(False)
+gui.SS_Form1..minbutton(False)
+gui.SS_Form1..mousepointer(0)
+gui.SS_Form1..moveable(True)
+gui.SS_Form1..sizeable(False)
+gui.SS_Form1..ShowInTaskBar(True)
+gui.SS_Form1..titlebar(True)
+gui.SS_Form1.lbl_txtCustbeg.create(label,"Beginning Customer",True,1800,200,1,100,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.txtCustbeg.create(textbox,"",True,1800,330,1,100,335,True,0,Arial,8,16777215,1)
+gui.SS_Form1.cmd_txtCustbeg.create(button)
+gui.SS_Form1.cmd_txtCustbeg.caption("^")
+gui.SS_Form1.cmd_txtCustbeg.visible(True)
+gui.SS_Form1.cmd_txtCustbeg.size(330,330)
+gui.SS_Form1.cmd_txtCustbeg.zorder(0)
+gui.SS_Form1.cmd_txtCustbeg.position(1985,335)
+gui.SS_Form1.cmd_txtCustbeg.enabled(True)
+gui.SS_Form1.cmd_txtCustbeg.fontname("Arial")
+gui.SS_Form1.cmd_txtCustbeg.fontsize(8)
+gui.SS_Form1.cmd_txtCustbeg.event(click,cmd_txtcustbeg_click)
+gui.SS_Form1.lbl_txtCustend.create(label,"Ending Customer",True,1800,200,1,2455,135,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.txtCustend.create(textbox,"",True,1800,330,1,2455,335,True,0,Arial,8,16777215,1)
+gui.SS_Form1.cmd_txtCustend.create(button)
+gui.SS_Form1.cmd_txtCustend.caption("^")
+gui.SS_Form1.cmd_txtCustend.visible(True)
+gui.SS_Form1.cmd_txtCustend.size(330,330)
+gui.SS_Form1.cmd_txtCustend.zorder(0)
+gui.SS_Form1.cmd_txtCustend.position(4340,335)
+gui.SS_Form1.cmd_txtCustend.enabled(True)
+gui.SS_Form1.cmd_txtCustend.fontname("Arial")
+gui.SS_Form1.cmd_txtCustend.fontsize(8)
+gui.SS_Form1.cmd_txtCustend.event(click,cmd_txtcustend_click)
+gui.SS_Form1.chkCustAll.create(checkbox)
+gui.SS_Form1.chkCustAll.caption("All Customers")
+gui.SS_Form1.chkCustAll.visible(True)
+gui.SS_Form1.chkCustAll.size(1800,300)
+gui.SS_Form1.chkCustAll.zorder(0)
+gui.SS_Form1.chkCustAll.position(100,835)
+gui.SS_Form1.chkCustAll.enabled(True)
+gui.SS_Form1.chkCustAll.alignment(0)
+gui.SS_Form1.chkCustAll.fontname("Arial")
+gui.SS_Form1.chkCustAll.fontsize(8)
+gui.SS_Form1.lbl_dtpInvoiceStart.create(label,"Beginning Invoice Date",True,1800,200,1,100,1220,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.dtpInvoiceStart.create(datepicker)
+gui.SS_Form1.dtpInvoiceStart.visible(True)
+gui.SS_Form1.dtpInvoiceStart.size(1800,345)
+gui.SS_Form1.dtpInvoiceStart.zorder(0)
+gui.SS_Form1.dtpInvoiceStart.position(100,1420)
+gui.SS_Form1.dtpInvoiceStart.enabled(True)
+gui.SS_Form1.dtpInvoiceStart.checkbox(False)
+gui.SS_Form1.lbl_dtpInvoiceEnd.create(label,"Ending Invoice Date",True,1800,200,1,1985,1220,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.dtpInvoiceEnd.create(datepicker)
+gui.SS_Form1.dtpInvoiceEnd.visible(True)
+gui.SS_Form1.dtpInvoiceEnd.size(1800,345)
+gui.SS_Form1.dtpInvoiceEnd.zorder(0)
+gui.SS_Form1.dtpInvoiceEnd.position(1985,1420)
+gui.SS_Form1.dtpInvoiceEnd.enabled(True)
+gui.SS_Form1.dtpInvoiceEnd.checkbox(False)
+gui.SS_Form1.chkInvoiceAll.create(checkbox)
+gui.SS_Form1.chkInvoiceAll.caption("All Dates")
+gui.SS_Form1.chkInvoiceAll.visible(True)
+gui.SS_Form1.chkInvoiceAll.size(1800,300)
+gui.SS_Form1.chkInvoiceAll.zorder(0)
+gui.SS_Form1.chkInvoiceAll.position(100,1935)
+gui.SS_Form1.chkInvoiceAll.enabled(True)
+gui.SS_Form1.chkInvoiceAll.alignment(0)
+gui.SS_Form1.chkInvoiceAll.fontname("Arial")
+gui.SS_Form1.chkInvoiceAll.fontsize(8)
+gui.SS_Form1.lbl_txtDaysBefore.create(label,"Days Before Due Date",True,1800,200,1,100,2320,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.txtDaysBefore.create(textbox,"",True,1800,330,1,100,2520,True,0,Arial,8,16777215,1)
+gui.SS_Form1.lbl_txtDaysAfter.create(label,"Days After Due Date",True,1800,200,1,1985,2320,True,0,Arial,8,-2147483633,0)
+gui.SS_Form1.txtDaysAfter.create(textbox,"",True,1800,330,1,1985,2520,True,0,Arial,8,16777215,1)
+gui.SS_Form1.cmdOk.create(button)
+gui.SS_Form1.cmdOk.caption("Ok")
+gui.SS_Form1.cmdOk.visible(True)
+gui.SS_Form1.cmdOk.size(1000,360)
+gui.SS_Form1.cmdOk.zorder(0)
+gui.SS_Form1.cmdOk.position(100,3020)
+gui.SS_Form1.cmdOk.enabled(True)
+gui.SS_Form1.cmdOk.fontname("Arial")
+gui.SS_Form1.cmdOk.fontsize(8)
+gui.SS_Form1.cmdOk.event(click,cmdok_click)
+
+
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+
+Variable.UDT.uTable.Define("Terminal",String,TERMINAL)
+Variable.UDT.uTable.Define("Sales_Rep",String,SALES_REP)
+Variable.UDT.uTable.Define("Rep_Name",String,REP_NAME)
+Variable.UDT.uTable.Define("Cust_No",String,CUST_NO)
+Variable.UDT.uTable.Define("Cust_Name",String,CUST_NAME)
+Variable.UDT.uTable.Define("City",String,CITY)
+Variable.UDT.uTable.Define("State",String,STATE)
+Variable.UDT.uTable.Define("Curr_year",String,CURR_YEAR)
+Variable.UDT.uTable.Define("Prev_Year",String,PREV_YEAR)
+Variable.UDT.uTable.Define("PRIOR_YEAR",String,PRIOR_YEAR)
+Variable.UDT.uTable.Define("CUR_MON",Float,CUR_MON)
+Variable.UDT.uTable.Define("CUR_TOT",Float,CUR_TOT)
+Variable.UDT.uTable.Define("PRV_YTD",Float,PRV_YTD)
+Variable.UDT.uTable.Define("PRV_Tot",Float,PRV_TOT)
+Variable.UDT.uTable.Define("PRIOR_TOT",Float,PRIOR_TOT)
+Variable.uGlobal.uTable.Declare("uTable")
+Variable.UDT.uCust.Define("Cust_No",String,CUSTOMER)
+Variable.UDT.uCust.Define("Cust_Name",String,Name_Customer)
+Variable.UDT.uCust.Define("City",String,CITY)
+Variable.UDT.uCust.Define("STATE",String,STATE)
+Variable.uGlobal.uCust.Declare("uCust")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+
+F.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass,7200)
+
+'Gui.SS_Form1.dtpInvoiceStart.Value("2012-01-01")
+'Gui.SS_Form1.dtpInvoiceEnd.Value("2012-07-27")
+'Gui.SS_Form1.txtCustend.Text("A+SE01")
+'Gui.SS_Form1.txtCustbeg.Text("000010")
+
+
+
+Gui.SS_Form1..Show
+
+Program.Sub.Main.End
+
+Program.Sub.Unload.Start
+F.ODBC.Connection!con.Close
+F.Intrinsic.Control.End
+
+
+Program.Sub.Unload.End
+
+program.sub.cmd_txtcustbeg_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtcustbeg_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtCustbeg.Text(V.Local.sRet.Trim)
+	Gui.SS_Form1.txtCustEnd.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtcustbeg_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3434_OntimeShip.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtcustbeg_click.end
+
+program.sub.cmd_txtcustend_click.start
+F.Intrinsic.Control.SetErrorHandler("cmd_txtcustend_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sRet.Declare(String)
+
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser(205,"",V.Local.sRet)
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.SS_Form1.txtCustEnd.Text(V.Local.sRet.Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txtcustend_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_3434_OntimeShip.gas",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+	F.Intrinsic.Control.CallSub(Unload)
+Function.Intrinsic.Control.EndIf
+
+
+program.sub.cmd_txtcustend_click.end
+
+program.sub.cmdok_click.start
+V.Local.sSQL.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sInvoiceStart.Declare(String)
+V.Local.sInvoiceEnd.Declare(String)
+V.Local.sCustbeg.Declare(String)
+V.Local.sCustEnd.Declare(String)
+V.Local.bSql.Declare(Boolean,False)
+V.Local.iUB.Declare(Long)
+V.Local.iYear.Declare(Long)
+V.Local.iMonth.Declare(Long)
+V.Local.dBegdate.Declare(Date)
+V.Local.dEnddate.Declare(Date)
+V.Local.i.Declare(Long)
+V.Local.iCurrMonth.Declare(Long)
+
+Gui.SS_Form1..Enabled(False)
+
+F.Intrinsic.String.Concat("Delete From GCG_3434_OntimeShip Where TERMINAL = '",V.Caller.Terminal,"'",V.Local.sSQL)
+F.ODBC.Connection!con.Execute(V.Local.sSQL)
+
+F.Intrinsic.String.Format(V.Screen.SS_Form1!dtpInvoiceStart.Value,"YYYY-MM-DD",V.Local.sInvoiceStart)
+F.Intrinsic.String.Format(V.Screen.SS_Form1!dtpInvoiceEnd.Value,"yyyy-mm-dd",V.Local.sInvoiceEnd)
+V.Local.sCustbeg.Set(V.Screen.SS_Form1!txtCustbeg.Text)
+V.Local.sCustEnd.Set(V.Screen.SS_Form1!txtCustend.Text)
+
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+
+'SQL statement will expand expand depending on GAB screen selection
+V.Local.sSQL.Set("Select * From V_ORDER_HIST_LINE")
+
+'If customer checkbox value = 1 then search for all customers else use customer range
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chkCustAll.Value,=,0)
+	F.Intrinsic.Control.If(V.Screen.SS_Form1!txtCustbeg.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Enter a beg customer ")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.ElseIf(V.Screen.SS_Form1!txtCustend.Text,=,"")
+		F.Intrinsic.UI.Msgbox("Enter a end customer ")
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.Concat(V.Local.sSQL," Where Customer between '",V.Local.sCustbeg,"' and '",V.Local.sCustEnd,"'",V.Local.sSQL)
+	V.Local.bSql.Set(True)
+F.Intrinsic.Control.EndIf
+
+'If invoice checkbox value = 1 then search for all invoice dates else use date range
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chkInvoiceAll.Value,=,0)
+	F.Intrinsic.Control.If(V.Local.bSql,=,True)
+		F.Intrinsic.String.Concat(V.Local.sSQL," and Date_Invoice between '",V.Local.sInvoiceStart,"' and '",V.Local.sInvoiceEnd,"'",V.Local.sSQL)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Concat(V.Local.sSQL," Where Date_Invoice between '",V.Local.sInvoiceStart,"' and '",V.Local.sInvoiceEnd,"'",V.Local.sSQL)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+F.Intrinsic.UI.InvokeWaitDialog("Loading...","Please Wait...")
+'Opens SQL statement above (sql statement based on search criteria selected on GAB screen)
+F.ODBC.Connection!con.OpenRecordsetRO("rst",V.Local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,=,False)
+	'Save data from Order_Hist_Line to custom sql table for report
+	F.Intrinsic.String.Concat("Select * From GCG_3434_OntimeShip Where TERMINAL = '",V.Caller.Terminal,"'",V.Local.sSQL)
+	F.ODBC.Connection!con.OpenRecordsetRW("rstSave",V.Local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rstSave.EOF,=,True)
+		F.Intrinsic.Control.DoUntil(V.ODBC.con!rst.EOF,=,True)
+			F.ODBC.con!rstSave.AddNew
+			F.ODBC.con!rstSave.Set!TERMINAL(V.Caller.Terminal)
+			F.ODBC.con!rstSave.Set!DATE_INVOICE(V.ODBC.con!rst.FieldValPervasiveDate!DATE_INVOICE)
+			F.ODBC.con!rstSave.Set!DATE_DUE(V.ODBC.con!rst.FieldValPervasiveDate!DATE_DUE)
+			F.ODBC.con!rstSave.Set!ORDER_NUMBER(V.ODBC.con!rst.FieldValTrim!ORDER_NO)
+			F.ODBC.con!rstSave.Set!ORDER_LINE(V.ODBC.con!rst.FieldValTrim!ORDER_LINE)
+			F.ODBC.con!rstSave.Set!PART_NUMBER(V.ODBC.con!rst.FieldValTrim!PART)
+			F.ODBC.con!rstSave.Set!CUSTOMER(V.ODBC.con!rst.FieldValTrim!CUSTOMER)
+			F.ODBC.con!rstSave.Set!SHIPTO_NAME(V.ODBC.con!rst.FieldValTrim!NAME_CUST_SHIP)
+			F.ODBC.con!rstSave.Set!QTY_ORDERED(V.ODBC.con!rst.FieldValLong!QTY_ORDERED)
+			F.ODBC.con!rstSave.Set!QTY_SHIPPED(V.ODBC.con!rst.FieldValFloat!QTY_SHIPPED)
+			F.ODBC.con!rstSave.Set!CUSTOMER_PO(V.ODBC.con!rst.FieldValTrim!CUSTOMER_PO)
+			F.ODBC.con!rstSave.Update
+			F.ODBC.con!rst.MoveNext
+		F.Intrinsic.Control.Loop
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Based on the search criteria no data was found","GAB Message")
+	Gui.SS_Form1..Enabled(True)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.ODBC.con!rst.Close
+
+F.Intrinsic.Control.CallSub(Report)
+Gui.SS_Form1..Enabled(True)
+F.Intrinsic.Control.ExitSub
+
+
+program.sub.cmdok_click.end
+
+Program.Sub.Report.Start
+V.Local.sParam.Declare(String)
+V.Local.sParamVal.Declare(String)
+V.Local.iReport.Declare(Long)
+V.Local.sDaysBefore.Declare(String)
+V.Local.sDaysAfter.Declare(String)
+V.Local.sStartDate.Declare(String)
+V.Local.sEndDate.Declare(String)
+V.Local.sAllDate.Declare(String)
+'F.Intrinsic.Debug.InvokeDebugger
+'F.Intrinsic.Debug.Stop
+F.Intrinsic.UI.CloseWaitDialog
+
+V.Local.sDaysBefore.Set(V.Screen.SS_Form1!txtDaysBefore.Text)
+V.Local.sDaysAfter.Set(V.Screen.SS_Form1!txtDaysAfter.Text)
+V.Local.sStartDate.Set(V.Screen.SS_Form1!dtpInvoiceStart.Value)
+V.Local.sEndDate.Set(V.Screen.SS_Form1!dtpInvoiceEnd.Value)
+V.Local.sAllDate.Set(V.Screen.SS_Form1!chkInvoiceAll.Value)
+V.Local.sParam.Set("Terminal*!*DaysBefore*!*DaysAfter*!*StartDate*!*EndDate*!*AllDate")
+F.Intrinsic.String.Concat(V.Caller.Terminal,"*!*",V.Local.sDaysBefore,"*!*",V.Local.sDaysAfter,"*!*",V.Local.sStartDate,"*!*",V.Local.sEndDate,"*!*",V.Local.sAllDate,V.Local.sParamVal)
+F.Intrinsic.String.Split(V.Local.sParam,"*!*",V.Local.sParam)
+F.Intrinsic.String.Split(V.Local.sParamVal,"*!*",V.Local.sParamVal)
+F.Global.BI.GetIDFromName("GCG_3434_SA_OnTime_Invoice.rpt",V.Local.iReport)
+F.Global.BI.PrintReport(V.Local.iReport,0,V.Local.sParam,V.Local.sParamVal,"",False)
+F.Intrinsic.Control.ExitSub
+
+
+Program.Sub.Report.End
+
+Program.Sub.Comments.Start
+${$0$}$GCG_Ontime_Ship$}$ERIC$}$7/25/2012
+${$3$}$0$}$$}$-1$}$-1$}$$}$1/1/1900$}$Quote 3864
+Program.Sub.Comments.End
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::On-Time Shipment Analysis by Customer
+SS_Form1.CTRL{{NAME::txtCustbeg\\TYPE::2\\CAPTION::Beginning Customer\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txtCustend\\TYPE::2\\CAPTION::Ending Customer\\GROUP::1\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::chkCustAll\\TYPE::9\\CAPTION::All Customers\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::dtpInvoiceStart\\TYPE::6\\CAPTION::Beginning Invoice Date\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::dtpInvoiceEnd\\TYPE::6\\CAPTION::Ending Invoice Date\\GROUP::2\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chkInvoiceAll\\TYPE::9\\CAPTION::All Dates\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtDaysBefore\\TYPE::2\\CAPTION::Days Before Due Date\\GROUP::3\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txtDaysAfter\\TYPE::2\\CAPTION::Days After Due Date\\GROUP::3\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdOk\\TYPE::5\\CAPTION::Ok\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
+
